@@ -7,9 +7,12 @@
 		<title>Pesquisa</title>
 	</head>
 	<body>
-	<%
-	
-	%>
-
+		<form action="PesquisaServlet.do" method="post">
+			Título:<input type="text" name="titulo">
+			<br>
+			Autor:<input type="text" name="autor">
+			<br>
+			<input type="submit" value="Pesquisar">
+		</form>
 	</body>
 </html>
