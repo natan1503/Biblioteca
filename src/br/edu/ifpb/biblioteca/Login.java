@@ -14,25 +14,17 @@ import javax.servlet.http.HttpServletResponse;
 public class Login extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		Pesquisa p = new Pesquisa();
-		String name = request.getParameter("name");
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
+		
+		String nome = request.getParameter("nome");
 		String senha = request.getParameter("senha");
-        
-		boolean caso = false;
-		try {
-			caso = p.PesquisaCadastro(name,senha);
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
-        if(caso==true){
-                System.out.println("\nVocê está logado!\n");
-                RequestDispatcher rq = request.getRequestDispatcher(
-    					"CadastroVolume.html");
-    			rq.forward(request, response);
-        } else 
-        	System.out.println("\nErro, Conta inexistente\n");
-
-		}
+		
+		if(nome.equals("admin")&&senha.equals("admin"))
+			response.sendRedirect("Redirecionamento.jsp");
+		else
+			response.sendRedirect("index.html");
+		
+	
 	}
+}
 
