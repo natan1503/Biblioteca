@@ -21,8 +21,8 @@ public class Remover<PreparedStatement> extends HttpServlet {
 		     try {
 		         Object connection;
 				PreparedStatement stmt = ((Object) connection)
-		         .prepareStatement("delete from volume where id=?");
-		         stmt.setLong(1, volume.getId());
+		         .prepareStatement("delete from tb_volume where TITULO=?");
+		         stmt.setLong(1, volume.getTitulo());
 		         stmt.execute();
 		         stmt.close();
 		     } catch (SQLException e) {
