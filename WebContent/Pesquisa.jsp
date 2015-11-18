@@ -4,7 +4,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-		<title>Pesquisa</title>
+		<title>Pesquisa Volume</title>
 	</head>
 	<body>
 		<form action="PesquisaServlet.do" method="post">
@@ -12,7 +12,7 @@
 			<br>
 			Autor:<input type="text" name="autor">
 			<br>
-			<input type="submit" value="Pesquisar">
+			<input type="Pesquisar">
 		</form>
 	</body>
 </html>
